@@ -4,7 +4,7 @@ function ZX9SPEAKER() {
       <div className="container bg-orange-400 px-4 py-8 rounded-lg flex justify-center items-center gap-14 flex-wrap flex-col-reverse md:flex-row">
         <div className="max-w-[350px]  ">
           <img
-            src="/public/home/desktop/image-speaker-zx9.png"
+            src="/home/desktop/image-speaker-zx9.png"
             alt="image-speaker-zx9"
             className="w-full"
           />

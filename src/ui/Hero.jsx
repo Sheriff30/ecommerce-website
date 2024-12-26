@@ -21,7 +21,7 @@ function Hero() {
         </div>
 
         <div className="max-w-[400px]  ">
-          <img src="/public/home/desktop/bg-img.png" alt="" />
+          <img src="/home/desktop/bg-img.png" alt="" />
         </div>
       </div>
     </div>

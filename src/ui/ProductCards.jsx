@@ -3,17 +3,17 @@ import ProductCard from "./ProductCard";
 function ProductCards() {
   const products = [
     {
-      img: "/public/shared/desktop/image-category-thumbnail-headphones.png",
+      img: "/shared/desktop/image-category-thumbnail-headphones.png",
       category: "headphones",
       link: "#",
     },
     {
-      img: "/public/shared/desktop/image-category-thumbnail-speakers.png",
+      img: "/shared/desktop/image-category-thumbnail-speakers.png",
       category: "speakers",
       link: "#",
     },
     {
-      img: "/public/shared/desktop/image-category-thumbnail-earphones.png",
+      img: "/shared/desktop/image-category-thumbnail-earphones.png",
       category: "earphones",
       link: "#",
     },

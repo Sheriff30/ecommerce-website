@@ -4,7 +4,7 @@ function YX1EARPHONES() {
       <div className="container  flex flex-wrap flex-col-reverse md:flex-row items-center bg-gray-100 rounded-lg overflow-hidden  ">
         <div className=" w-full md:w-1/2 ">
           <img
-            src="/public/home/desktop/image-earphones-yx1.jpg"
+            src="/home/desktop/image-earphones-yx1.jpg"
             alt="image-earphones-yx1"
             className=" w-full "
           />

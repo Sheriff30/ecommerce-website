@@ -18,7 +18,7 @@ function AboutAudiophile() {
         </div>
         <div className="rounded-lg overflow-hidden">
           <img
-            src="/public/shared/desktop/image-best-gear.jpg"
+            src="/shared/desktop/image-best-gear.jpg"
             alt="image-best-gear"
             className="w-full"
           />
