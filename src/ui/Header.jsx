@@ -1,10 +1,13 @@
 import { CiShoppingCart } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <div className="p-4 bg-black  ">
       <div className="container  text-white flex items-center justify-between ">
-        <div className="font-bold text-2xl">audiophile</div>
+        <Link to="/" className="font-bold text-2xl">
+          audiophile
+        </Link>
 
         <ul className=" items-center gap-4 text-lg hidden md:flex ">
           <li>
