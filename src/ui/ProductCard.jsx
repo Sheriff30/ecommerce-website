@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function ProductCard({ link, category, img }) {
   return (
-    <a
-      href={link}
+    <Link
+      to={link}
       className="flex flex-col items-center gap-2 bg-gray-100 py-4 px-8 rounded-lg"
     >
       <img src={img} alt={category} className="max-w-[200px]  " />
@@ -13,7 +14,7 @@ function ProductCard({ link, category, img }) {
         <span>Shop</span>
         <IoIosArrowForward />{" "}
       </div>
-    </a>
+    </Link>
   );
 }
 

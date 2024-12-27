@@ -5,17 +5,17 @@ function ProductCards() {
     {
       img: "/shared/desktop/image-category-thumbnail-headphones.png",
       category: "headphones",
-      link: "#",
+      link: "/headphones",
     },
     {
       img: "/shared/desktop/image-category-thumbnail-speakers.png",
       category: "speakers",
-      link: "#",
+      link: "/speakers",
     },
     {
       img: "/shared/desktop/image-category-thumbnail-earphones.png",
       category: "earphones",
-      link: "#",
+      link: "/earphones",
     },
   ];
   return (

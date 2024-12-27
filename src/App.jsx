@@ -1,24 +1,18 @@
-import AboutAudiophile from "./ui/AboutAudiophile";
-import Footer from "./ui/Footer";
-import Header from "./ui/Header";
-import Hero from "./ui/Hero";
-import ProductCards from "./ui/ProductCards";
-import YX1EARPHONES from "./ui/YX1EARPHONES";
-import ZX7SPEAKER from "./ui/ZX7SPEAKER";
-import ZX9SPEAKER from "./ui/ZX9SPEAKER";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import Layout from "./Pages/Layout";
+import Category from "./Pages/Category";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      <ProductCards />
-      <ZX9SPEAKER />
-      <ZX7SPEAKER />
-      <YX1EARPHONES />
-      <AboutAudiophile />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/:category" element={<Category />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

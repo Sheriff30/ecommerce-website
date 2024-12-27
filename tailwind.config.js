@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        zx7speakbg: "url('/public/home/desktop/image-speaker-zx7.jpg')",
+        zx7speakbg: "url('/home/desktop/image-speaker-zx7.jpg')",
       },
       container: {
         center: true,
