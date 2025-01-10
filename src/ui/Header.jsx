@@ -1,7 +1,9 @@
 import { CiShoppingCart } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import useCartStore from "../store/cartStore";
 
 function Header() {
+  const cartItems = useCartStore((state) => state.cartItems);
   return (
     <div className="p-4 bg-black  ">
       <div className="container  text-white flex items-center justify-between ">
@@ -25,6 +27,7 @@ function Header() {
         </ul>
 
         <CiShoppingCart size={36} />
+        <div>{cartItems.length}</div>
       </div>
     </div>
   );

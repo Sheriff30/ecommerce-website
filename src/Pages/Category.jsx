@@ -10,6 +10,9 @@ function Category() {
 
   return (
     <>
+      <div className=" text-white bg-black text-2xl text-center py-10 px-4 flex items-center justify-center uppercase">
+        <p>{category}</p>
+      </div>
       {filteredData.map((item, index) => {
         const isReversed = index % 2 !== 0;
 
@@ -50,7 +53,6 @@ function Category() {
           </div>
         );
       })}
-
       <ProductCards />
       <AboutAudiophile />
     </>
