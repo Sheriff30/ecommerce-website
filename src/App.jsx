@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import Layout from "./Pages/Layout";
 import Category from "./Pages/Category";
 import Product from "./Pages/Product";
+import Checkout from "./Pages/Checkout";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path=":category" element={<Category />} />
           <Route path=":category/:product" element={<Product />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Route>
       </Routes>
     </BrowserRouter>

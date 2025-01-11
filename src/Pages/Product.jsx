@@ -24,9 +24,11 @@ function Product() {
     e.preventDefault();
     const formData = new FormData(e.target);
     addItem({
-      amount: formData.get("amount"),
       name: filterdData.name,
+      image: filterdData.image,
+      amount: Number(formData.get("amount")),
       price: filterdData.price,
+      total: filterdData.price * formData.get("amount"),
     });
   }
 

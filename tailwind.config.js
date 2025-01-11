@@ -12,6 +12,9 @@ export default {
           DEFAULT: "1440px",
         },
       },
+      boxShadow: {
+        smoothBlack: "0 0px 200px rgba(0, 0, 0, 0.2)",
+      },
     },
     plugins: [],
   },
