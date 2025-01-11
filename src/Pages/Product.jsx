@@ -73,6 +73,7 @@ function Product() {
                 className=" py-4 px-8 bg-gray-100 text-center max-w-40"
                 defaultValue="1"
                 name="amount"
+                min={1}
               />
               <button
                 to={filterdData.slug}
