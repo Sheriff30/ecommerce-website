@@ -5,11 +5,11 @@ import Layout from "./Pages/Layout";
 import Category from "./Pages/Category";
 import Product from "./Pages/Product";
 import Checkout from "./Pages/Checkout";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -18,6 +18,12 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
         </Route>
       </Routes>
+      <ScrollToTop />
+      <Toaster
+        toastOptions={{
+          className: "toast",
+        }}
+      />
     </BrowserRouter>
   );
 }

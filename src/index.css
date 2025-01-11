@@ -21,3 +21,9 @@
     }
   }
 }
+
+@layer components {
+  .toast {
+    @apply text-center  shadow-lg;
+  }
+}

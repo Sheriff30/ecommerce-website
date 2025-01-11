@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { create } from "zustand";
 
 const useCartStore = create((set) => ({
@@ -5,6 +6,7 @@ const useCartStore = create((set) => ({
   //   Adding Items to cart
   addItem: (item) =>
     set((state) => {
+      toast.success(`${item.name} Added To Cart 🛒`);
       const existingItemIndex = state.cartItems.findIndex(
         (cartItem) => cartItem.name === item.name
       );
@@ -22,6 +24,7 @@ const useCartStore = create((set) => ({
   // Removing all Items from cart
 
   removeItems: () => {
+    toast.success("All products have been removed from the cart 🛒");
     set(() => ({ cartItems: [] }));
   },
 }));
