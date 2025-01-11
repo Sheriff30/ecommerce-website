@@ -15,10 +15,9 @@ function Product() {
   });
 
   const handleGoBack = () => {
-    navigate(-1); // This navigates back to the previous page
+    navigate(-1);
   };
   const [filterdData] = data.filter((item) => item.slug === product);
-  console.log(filterdData);
 
   function addToCart(e) {
     e.preventDefault();

@@ -3,26 +3,33 @@ import { Link } from "react-router-dom";
 import useCartStore from "../store/cartStore";
 
 function Cart({ handleCartDisplay }) {
-  const { cartItems, removeItems } = useCartStore();
-  const total = cartItems.reduce((sum, item) => sum + item.total, 0);
+  const { removeItems } = useCartStore();
+  const localStorageCartItems =
+    JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  const total = localStorageCartItems.reduce(
+    (sum, item) => sum + item.total,
+    0
+  );
   const intl = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
   });
-  console.log(cartItems);
   return (
     <div className="max-w-[370px] w-full z-10 bg-white absolute right-0 text-black top-[200%] shadow-smoothBlack p-5 rounded-md ">
-      {cartItems.length ? (
+      {localStorageCartItems.length ? (
         <div className="grid gap-5">
           <div className="flex justify-between">
-            <p className="text-lg font-semibold">Cart ( {cartItems.length} )</p>
+            <p className="text-lg font-semibold">
+              Cart ( {localStorageCartItems.length} )
+            </p>
             <button className="text-gray-400 underline" onClick={removeItems}>
               Remove All
             </button>
           </div>
 
           <div className="grid gap-5 max-h-[240px] overflow-y-auto custom-scrollbar pr-2">
-            {cartItems.map((e) => (
+            {localStorageCartItems.map((e) => (
               <div
                 key={e.name}
                 className="flex justify-between gap-2 items-center"
