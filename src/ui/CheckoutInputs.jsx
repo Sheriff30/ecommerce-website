@@ -1,6 +1,6 @@
 function CheckoutInputs() {
   return (
-    <div className="bg-white p-10 rounded-md grid gap-10">
+    <div className="bg-white p-5 lg:p-10 rounded-md grid gap-10">
       <p className="uppercase text-2xl font-semibold ">checkout</p>
 
       {/*Billing Details */}

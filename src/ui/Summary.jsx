@@ -13,7 +13,7 @@ function Summary({ isLoading }) {
   const grandTotal = shipping + total;
 
   return (
-    <div className="bg-white p-10 rounded-md flex flex-col gap-5 ">
+    <div className="bg-white p-5 lg:p-10 rounded-md flex flex-col gap-5 ">
       {" "}
       <p className="uppercase text-2xl font-semibold ">summary</p>
       <div className="grid gap-5 max-h-[240px] overflow-y-auto custom-scrollbar pr-2">
