@@ -6,8 +6,6 @@ import useCartStore from "../store/cartStore";
 function CartContainer() {
   const [showCart, setShowCart] = useState(false);
   const { cartItems } = useCartStore();
-  const localStorageCartItems =
-    JSON.parse(localStorage.getItem("cartItems")) || [];
 
   const cartRef = useRef(null);
   const cartIconRef = useRef(null);
@@ -40,8 +38,8 @@ function CartContainer() {
       <div ref={cartIconRef} onClick={handleCartDisplay} className="relative">
         <CiShoppingCart size={36} className="cursor-pointer" />
         {cartItems.length ? (
-          <span className="text-white absolute -top-1 -right-1 bg-black border-2  rounded-[50%] h-6 w-6 text-center flex justify-center items-center ">
-            <div>{localStorageCartItems.length}</div>
+          <span className="text-white absolute -top-1 -right-1 bg-black border-2 cursor-pointer rounded-[50%] h-6 w-6 text-center flex justify-center items-center ">
+            <div>{cartItems.length}</div>
           </span>
         ) : null}
       </div>
