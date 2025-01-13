@@ -11,16 +11,16 @@ function Header() {
 
         <ul className=" items-center gap-4 text-lg hidden md:flex ">
           <li>
-            <a href="#">HOME</a>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <a href="#">HEADPHONES</a>
+            <Link to="/headphones">HEADPHONES</Link>
           </li>
           <li>
-            <a href="#">SPEAKERS</a>
+            <Link to="/speakers">SPEAKERS</Link>
           </li>
           <li>
-            <a href="#">EARPHONES</a>
+            <Link to="/earphones">EARPHONES</Link>
           </li>
         </ul>
 

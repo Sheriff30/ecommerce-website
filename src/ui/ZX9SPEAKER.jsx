@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ZX9SPEAKER() {
   return (
     <div className="p-4">
@@ -19,9 +21,12 @@ function ZX9SPEAKER() {
             <p>phenomenally built to deliver truly remarkable</p>
             sound.
           </p>
-          <a href="#" className="bg-black text-white py-4 px-8">
+          <Link
+            to="speakers/zx9-speaker"
+            className="bg-black text-white py-4 px-8"
+          >
             See Product
-          </a>{" "}
+          </Link>{" "}
         </div>
       </div>
     </div>

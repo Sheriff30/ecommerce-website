@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
     <div className="bg-black py-20 px-4">
@@ -15,9 +17,12 @@ function Hero() {
             enthusiast.
           </div>
 
-          <a href="#" className="bg-orange-400 py-4 px-8">
+          <Link
+            to="headphones/xx99-mark-one-headphones"
+            className="bg-orange-400 py-4 px-8"
+          >
             See Product
-          </a>
+          </Link>
         </div>
 
         <div className="max-w-[400px]  ">

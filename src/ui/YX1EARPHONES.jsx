@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function YX1EARPHONES() {
   return (
     <div className="p-4">
@@ -11,9 +13,12 @@ function YX1EARPHONES() {
         </div>
         <div className="text-black text-lg flex flex-col items-center text-center md:items-start md:text-start gap-6 flex-1 p-10 ">
           <h2 className="text-4xl font-bold">YX1 EARPHONES</h2>
-          <a href="#" className="border border-black text-black py-4 px-8">
+          <Link
+            to="earphones/yx1-earphones"
+            className="border border-black text-black py-4 px-8"
+          >
             See Product
-          </a>{" "}
+          </Link>{" "}
         </div>
       </div>
     </div>

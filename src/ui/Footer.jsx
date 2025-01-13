@@ -1,6 +1,7 @@
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -11,16 +12,16 @@ function Footer() {
 
           <ul className=" items-center gap-4 text-lg flex flex-wrap ">
             <li>
-              <a href="#">HOME</a>
+              <Link to="/">HOME</Link>
             </li>
             <li>
-              <a href="#">HEADPHONES</a>
+              <Link to="/headphones">HEADPHONES</Link>
             </li>
             <li>
-              <a href="#">SPEAKERS</a>
+              <Link to="/speakers">SPEAKERS</Link>
             </li>
             <li>
-              <a href="#">EARPHONES</a>
+              <Link to="/earphones">EARPHONES</Link>
             </li>
           </ul>
         </div>
@@ -46,7 +47,7 @@ function Footer() {
         </div>
 
         <p className="text-sm opacity-75">
-          Copyright 2021. All Rights Reserved
+          Made with ❤️ by <strong>Sherif Fouad</strong>{" "}
         </p>
       </div>
     </div>
