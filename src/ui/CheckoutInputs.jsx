@@ -8,7 +8,7 @@ function CheckoutInputs() {
         <p className="text-orange-400 uppercase font-semibold">
           Billing Details
         </p>
-        <div className="grid gap-4 grid-cols-2">
+        <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
           <div className="grid gap-2">
             <label htmlFor="name" className="font-semibold">
               Name
@@ -56,7 +56,7 @@ function CheckoutInputs() {
         <p className="text-orange-400 uppercase font-semibold">
           shipping info{" "}
         </p>
-        <div className="grid gap-4 grid-cols-2">
+        <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
           <div className="grid gap-2">
             <label htmlFor="address" className="font-semibold">
               Address
@@ -116,7 +116,7 @@ function CheckoutInputs() {
         <p className="text-orange-400 uppercase font-semibold">
           payment details
         </p>
-        <div className="grid gap-4 grid-cols-2">
+        <div className="grid gap-4 grid-cols-1 lg:grid-cols-2">
           <div className="grid gap-2">
             <label htmlFor="payment" className="font-semibold">
               Payment Method

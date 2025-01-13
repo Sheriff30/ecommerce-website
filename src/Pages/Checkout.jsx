@@ -10,6 +10,9 @@ import toast from "react-hot-toast";
 function Checkout() {
   const { cartItems, removeItems } = useCartStore();
   const navigate = useNavigate();
+  const total = cartItems.reduce((sum, item) => sum + item.total, 0);
+  const shipping = 50;
+  const grandTotal = shipping + total;
 
   const { mutate, isPending } = useMutation({
     mutationFn: insertOrder,
@@ -34,9 +37,6 @@ function Checkout() {
   if (cartItems.length === 0) {
     return null;
   }
-  const total = cartItems.reduce((sum, item) => sum + item.total, 0);
-  const shipping = 50;
-  const grandTotal = shipping + total;
 
   function submitOrder(e) {
     e.preventDefault();
@@ -54,7 +54,7 @@ function Checkout() {
 
   return (
     <form className="py-20 px-4 bg-gray-100" onSubmit={submitOrder}>
-      <div className="container grid grid-cols-[2fr_1fr] gap-5 ">
+      <div className="container grid grid-cols-1 gap-5 lg:grid-cols-[2fr_1fr] ">
         <CheckoutInputs />
         <Summary isLoading={isPending} />
       </div>
