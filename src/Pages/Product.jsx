@@ -17,17 +17,25 @@ function Product() {
   const handleGoBack = () => {
     navigate(-1);
   };
-  const [filterdData] = data.filter((item) => item.slug === product);
+  const [filteredData] = data.filter((item) => item.slug === product);
+
+  if (!filteredData) {
+    return (
+      <div className="flex justify-center items-center h-screen ">
+        <p className="text-3xl font-bold">Page Not Found :( </p>
+      </div>
+    );
+  }
 
   function addToCart(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
     addItem({
-      name: filterdData.name,
-      image: filterdData.image,
+      name: filteredData.name,
+      image: filteredData.image,
       amount: Number(formData.get("amount")),
-      price: filterdData.price,
-      total: filterdData.price * formData.get("amount"),
+      price: filteredData.price,
+      total: filteredData.price * formData.get("amount"),
     });
   }
 
@@ -42,10 +50,10 @@ function Product() {
       <div className="pb-20 px-4 text-lg">
         <div className="container text-black text-lg flex items-center gap-14 justify-center flex-wrap">
           <div className="max-w-[400px]  ">
-            <img src={filterdData.image.desktop} alt="" />
+            <img src={filteredData.image.desktop} alt="" />
           </div>
           <div className="flex flex-col gap-6 items-center text-center md:text-start md:items-start ">
-            {filterdData.new ? (
+            {filteredData.new ? (
               <span className="text-sm  opacity-75 tracking-widest text-orange-400 ">
                 NEW PRODUCT
               </span>
@@ -53,14 +61,14 @@ function Product() {
               ""
             )}
 
-            <h1 className="text-4xl font-bold">{filterdData.name}</h1>
+            <h1 className="text-4xl font-bold">{filteredData.name}</h1>
 
             <div className="opacity-75 max-w-[450px] ">
-              <p>{filterdData.description}</p>
+              <p>{filteredData.description}</p>
             </div>
 
             <div className="font-semibold">
-              {intl.format(filterdData.price)}
+              {intl.format(filteredData.price)}
             </div>
 
             <form
@@ -75,7 +83,7 @@ function Product() {
                 min={1}
               />
               <button
-                to={filterdData.slug}
+                to={filteredData.slug}
                 className="bg-orange-400 py-4 px-8 text-white"
               >
                 ADD TO CART
@@ -89,12 +97,12 @@ function Product() {
         <div className="container text-black text-lg flex  gap-14 justify-start lg:justify-center  flex-wrap">
           <div className="max-w-[800px]">
             <p className="text-xl font-bold mb-3">FEATURES</p>
-            <p>{filterdData.features}</p>
+            <p>{filteredData.features}</p>
           </div>
           <div>
             <p className="text-xl font-bold mb-3 uppercase">in the box</p>
             <div className="grip gap-3">
-              {filterdData.includes.map((e) => (
+              {filteredData.includes.map((e) => (
                 <p key={e.item} className="flex gap-2">
                   <span className="text-orange-400 font-semibold">
                     {e.quantity}x
@@ -113,14 +121,14 @@ function Product() {
             you may also like
           </h3>
           <div className="flex gap-10 justify-center flex-wrap ">
-            {filterdData.others.map((e) => (
+            {filteredData.others.map((e) => (
               <div key={e.slug} className="max-w-[300px] flex flex-col gap-5">
                 <img src={e.image.desktop} alt={e.name} />
 
                 <p className="font-semibold text-center">{e.name}</p>
 
                 <Link
-                  to={`/${filterdData.category}/${e.slug}`}
+                  to={`/${filteredData.category}/${e.slug}`}
                   className="bg-orange-400 py-4 px-8 text-white mx-auto uppercase"
                 >
                   See Product

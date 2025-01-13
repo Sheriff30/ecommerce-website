@@ -7,6 +7,7 @@ import Product from "./Pages/Product";
 import Checkout from "./Pages/Checkout";
 import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ function App() {
             <Route path=":category" element={<Category />} />
             <Route path=":category/:product" element={<Product />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
         <ScrollToTop />

@@ -7,6 +7,14 @@ function Category() {
   const { category } = useParams();
   const filteredData = data.filter((item) => item.category === category);
 
+  if (filteredData.length === 0) {
+    return (
+      <div className="flex justify-center items-center h-screen ">
+        <p className="text-3xl font-bold">Page Not Found :( </p>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className=" text-white bg-black text-2xl text-center py-10 px-4 flex items-center justify-center uppercase">
