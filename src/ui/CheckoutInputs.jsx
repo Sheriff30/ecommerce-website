@@ -14,10 +14,11 @@ function CheckoutInputs() {
               Name
             </label>
             <input
+              required
               type="text"
               name="name"
               id="name"
-              placeholder="Sherif Fouad"
+              placeholder="Alexei Ward"
               className="p-4 border border-gray-200 rounded-md "
             />
           </div>
@@ -26,10 +27,11 @@ function CheckoutInputs() {
               Email Address
             </label>
             <input
+              required
               type="email"
               id="email"
               name="email"
-              placeholder="sherifdevv@gmail.com"
+              placeholder="alexei@mail.com"
               className="p-4 border border-gray-200 rounded-md "
             />
           </div>
@@ -38,10 +40,11 @@ function CheckoutInputs() {
               Phone Number
             </label>
             <input
+              required
               type="tel"
               id="phone"
               name="phone"
-              placeholder="+201044022333"
+              placeholder="+1 202-555-0136"
               className="p-4 border border-gray-200 rounded-md "
             />
           </div>
@@ -59,6 +62,7 @@ function CheckoutInputs() {
               Address
             </label>
             <input
+              required
               type="text"
               id="address"
               name="address"
@@ -71,6 +75,7 @@ function CheckoutInputs() {
               ZIP Code{" "}
             </label>
             <input
+              required
               type="text"
               id="zipcode"
               name="zipcode"
@@ -83,6 +88,7 @@ function CheckoutInputs() {
               City
             </label>
             <input
+              required
               type="text"
               id="city"
               name="city"
@@ -95,6 +101,7 @@ function CheckoutInputs() {
               Country
             </label>
             <input
+              required
               type="text"
               id="country"
               name="country"

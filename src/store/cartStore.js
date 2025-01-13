@@ -22,7 +22,6 @@ const useCartStore = create((set) => ({
     }),
 
   removeItems: () => {
-    toast.success("All products have been removed from the cart 🛒");
     localStorage.setItem("cartItems", JSON.stringify([]));
     set(() => ({ cartItems: [] }));
   },

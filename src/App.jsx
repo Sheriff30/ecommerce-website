@@ -6,25 +6,30 @@ import Category from "./Pages/Category";
 import Product from "./Pages/Product";
 import Checkout from "./Pages/Checkout";
 import { Toaster } from "react-hot-toast";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
+  const queryClient = new QueryClient();
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path=":category" element={<Category />} />
-          <Route path=":category/:product" element={<Product />} />
-          <Route path="/checkout" element={<Checkout />} />
-        </Route>
-      </Routes>
-      <ScrollToTop />
-      <Toaster
-        toastOptions={{
-          className: "toast",
-        }}
-      />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path=":category" element={<Category />} />
+            <Route path=":category/:product" element={<Product />} />
+            <Route path="/checkout" element={<Checkout />} />
+          </Route>
+        </Routes>
+        <ScrollToTop />
+        <Toaster
+          toastOptions={{
+            className: "toast",
+          }}
+        />
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 

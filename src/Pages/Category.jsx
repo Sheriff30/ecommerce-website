@@ -6,7 +6,6 @@ import AboutAudiophile from "../ui/AboutAudiophile";
 function Category() {
   const { category } = useParams();
   const filteredData = data.filter((item) => item.category === category);
-  console.log(filteredData);
 
   return (
     <>

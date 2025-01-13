@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import useCartStore from "../store/cartStore";
 
-function Summary() {
+function Summary({ isLoading }) {
   const { cartItems } = useCartStore();
 
   const total = cartItems.reduce((sum, item) => sum + item.total, 0);
@@ -46,8 +47,9 @@ function Summary() {
         <p className="font-semibold">{intl.format(grandTotal)}</p>
       </div>
       <button
-        className="bg-orange-400 py-4 px-8 text-center text-white uppercase"
+        className="bg-orange-400 py-4 px-8 text-center text-white uppercase disabled:opacity-50"
         type="submit"
+        disabled={isLoading}
       >
         Order
       </button>
